@@ -74,7 +74,31 @@ export { aa };
 #### rollup-plugin-terser
 > 压缩代码
 
+#### rollup-plugin-postcss
+> 处理css需要用到的插件是 rollup-plugin-postcss。它支持css文件的加载、css加前缀、css压缩、对scss/less的支持等等。
+#### rollup-plugin-serve
+> 用于启动一个服务器
+
+#### rollup-plugin-livereload
+>用于文件变化时，实时刷新页面
+```javascript
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
+export default {
+  ...
+  plugins:[
+    serve({
+      contentBase: '',  //服务器启动的文件夹，默认是项目根目录，需要在该文件下创建index.html
+      port: 8020   //端口号，默认10001
+    }),    
+    livereload('dist')   //watch dist目录，当目录中的文件发生变化时，刷新页面
+  ]
+}
+
+```
 ### 进阶和精通
 [10分钟快速精通rollup.js——前置学习之基础知识篇](https://www.imooc.com/article/264075)
+
 [10分钟快速精通rollup.js——前置学习之rollup.js插件篇](https://www.imooc.com/article/264076)
+
 [10分钟快速精通rollup.js——Vue.js源码打包原理深度分析](https://www.imooc.com/article/264074)
