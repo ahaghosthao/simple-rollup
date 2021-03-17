@@ -55,5 +55,26 @@ export { aa };
 如果你想知道具体的详细知识，你可以去看[官网](https://rollupjs.org/guide/en/) 或者是[中文网站](https://www.rollupjs.com)。 如果你更喜欢手把手教程，我给你推荐下面这一篇[10分钟快速入门rollup](https://www.imooc.com/article/262083)。
 
 
+### 常用的插件
+#### rollup-plugin-node-resolve
+> 这个插件是将我们的代码中引用的第三方库合并到我们的打包文件中，避免用户再去使用安装！
 
+#### rollup-plugin-commonjs
+> 这个插件是让我们可以使用 CommomJs 模块
 
+#### rollup-plugin-babel
+> 使用 babel 将 es6+的语法转化为低版本的语法
+
+#### rollup-plugin-json
+> 可以支持引入 json 文件
+
+#### rollup-plugin-uglify
+> 压缩代码体积 不支持 es模块 所以可以用下面的代替
+
+#### rollup-plugin-terser
+> 压缩代码
+
+### 进阶和精通
+[10分钟快速精通rollup.js——前置学习之基础知识篇](https://www.imooc.com/article/264075)
+[10分钟快速精通rollup.js——前置学习之rollup.js插件篇](https://www.imooc.com/article/264076)
+[10分钟快速精通rollup.js——Vue.js源码打包原理深度分析](https://www.imooc.com/article/264074)

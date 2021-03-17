@@ -1,3 +1,4 @@
+import resolve from 'rollup-plugin-node-resolve';
 export default {
     input:'./src/main.js',
     output:[{
@@ -5,5 +6,8 @@ export default {
         format:'cjs',
         banner: '// welcome to rollup',
         footer: '// powered by ghosthao'
-    }]
+    }],
+    plugins:[
+        resolve()
+    ]
 }
